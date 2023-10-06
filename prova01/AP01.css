@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navegador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EAF9D9;
+}
+
+.menu-dropdown {
+    width: 220px;
+    text-align: center;
+}
+.menu-dropdown .button{
+    background-color: #e2d4ba;
+    border: 1px solid #667761;
+    border-radius: 0px;
+    padding: 8px 16px;
+    cursor: pointer;
+    box-shadow: 8px 8px 8px #824C71;
+    transition: tranform 300ms, box-shadow 300ms;
+}
+
+.menu-dropdown .menu {
+    background-color: #e2d4ba;
+    border-radius: 0px;
+    position: absolute;
+    width: 150px;
+    display: none;
+    box-shadow: 8px 5px 3px #824C71;
+    transition: tranform 300ms, box-shadow 300ms;
+}
+
+.menu-dropdown:hover .menu{
+    display: block;
+    background-color: #e2d4ba
+    border: 2px: #667761;
+    border-radius: 0px;
+    box-shadow: 8px 5px 3px #824C71;
+    transition: tranform 300ms, box-shadow 300ms;
+}
+
+.menu-dropdown .menu .links-caixa{
+    display: block;
+    text-decoration: none;
+    color:#667761;
+    padding: 8px;
+    background-color: #e2d4ba;
+    border: 2px solid #EAF9D9;
+    border-radius: 0px;
+}
+
+.menu-dropdown .menu .links-caixa:hover {
+    background-color: #e2d4ba;
+    border: 2px #EAF9D9;
+    border-radius: 0px;
+}
+
+.navegador .navegador-superior-movel {
+    margin: 6px;
+    padding: 20px 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navegador-superior-movel .link {
+    margin-right: 30px;
+    padding: 5px 30px;
+    text-decoration: none;
+    color: #000000;
+    background-color: #e2d4ba;
+    border: 2px solid #667761 ;
+    border-radius: 0px;
+    box-shadow: 8px 8px 8px #824C71;
+    transition: tranform 300ms, box-shadow 300ms;
+}
+
+.navegador-superior-movel .link:hover {
+    background-color: #e2d4ba;
+    border: 2px solid #EAF9D9;
+    border-radius: 0px;
+}
+
+.container {
+    display: flex;
+    flex-grow: 0;
+}
+
+.barra-navegacao-movel-lateral-esq {
+    display: flex;
+    height: 1200px;
+    width: 20vw;
+    background-color: #EAF9D9;
+    justify-content: center;
+}
+
+.links-nav-lateral-esq .link-esq {
+    display: block;
+    text-decoration: none;
+    color: black;
+    background-color: #e2d4ba;
+    border: 2px solid #667761;
+    border-radius: 0px;
+    padding: 5px 65px;
+    margin-top: 40px;
+}
+
+.links-nav-lateral-esq .link-esq:hover {
+    background-color: #e2d4ba;
+    border: 2px solid #EAF9D9;
+    border-radius: 0px;
+}
+
+.conteudo-site { 
+    background-color: rgb(253, 248, 241);
+    width: 80vw;
+    height: 1200px;
+}
+
+.conteudo-site .texto-site {
+    display: flex;
+    margin: 60px;
+    justify-content: center;
+}
+
+/* A animação vai ficar em looping girando a 360*/
+@keyframes girar {
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* o formato de animação faz rápidos 10 passos(os steps) e finaliza, na duração selecionada de 1.5s(animation-duration) e renicia em loop, pois foi definida que a animação vai ficar intergindo infinitamente (animation-iteration-count)*/
+.conteudo-site .loading {
+    height: 250px;
+    width: 250px;
+    margin: 60px;
+    margin-left: 300px;
+    border: 30px solid #ececec; 
+    border-top: 30px solid #667761; 
+    border-radius: 50%;
+    animation-name: girar;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(10,end); 
+}
+
+/* Usado para manter o site responsivo*/
+@media screen and (max-width: 600px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .navegador {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: #e2d4ba;
+    }
+    
+    .menu-dropdown {
+        width: 200px;
+        text-align: center;
+    }
+    .meunu-dropdown .button{
+        background-color: #EAF9D9;
+        border: 2px solid #e2d4ba;
+        border-radius: 0px;
+        padding: 5px 15px;
+        cursor: pointer;
+    }
+    
+    .meunu-dropdown .menu {
+        background-color: #EAF9D9;
+        border-radius: 15px;
+        position: absolute;
+        width: 200px;
+        display: none;
+    }
+    
+    .menu-dropdown:hover .menu{
+        display: block;
+        background-color: #EAF9D9;
+        border: 2px solid #e2d4ba;
+        border-radius: 0px;
+    }
+    
+    .menu-dropdown .menu .links-caixa{
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding: 5px;
+        background-color: #e2d4ba;
+        border: 2px solid #EAF9D9;
+        border-radius: 0px;
+    }
+    
+    .menu-dropdown .menu .links-caixa:hover {
+        background-color: #EAF9D9;
+        border: 2px solid #e2d4ba;
+        border-radius: 0px;
+    }
+    
+    .navegador .navegador-superior-movel {
+        margin: 5px;
+        padding: 20px 0px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .navegador-superior-movel .link {
+        margin-right: 30px;
+        padding: 5px 30px;
+        text-decoration: none;
+        color: black;
+        background-color: #EAF9D9;
+        border: 2px solid #e2d4ba;
+        border-radius: 0px;
+    }
+    
+    .navegador-superior-movel .link:hover {
+        background-color: #e2d4ba;
+        border: 2px solid #EAF9D9;
+        border-radius: 0px;
+    }
+    
+    .container {
+        display: block;
+        width: 100%;
+    }
+    
+    .barra-navegacao-movel-lateral-esq {
+        display: flex;
+        width: 100%;
+        height: 340px;
+        background-color: #667761;
+        justify-content: center;
+    }
+    
+    .links-nav-lateral-esq .link-esq {
+        display: block;
+        text-decoration: none;
+        color: black;
+        background-color: #EAF9D9;
+        border: 2px solid #e2d4ba;
+        border-radius: 0px;
+        padding: 5px 60px;
+        margin-top: 30px;
+    }
+    
+    .links-nav-lateral-esq .link-esq:hover {
+        background-color: #e2d4ba;
+        border: 3px solid #EAF9D9;
+        border-radius: 0px;
+    }
+    
+    .conteudo-site {
+        width: 100%;
+        height: 1200px;
+    }
+    
+    .conteudo-site.texto-site {
+        display: flex;
+        justify-content: center;
+    }
+    
+    @keyframes girar {
+        from{
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    
+    .conteudo-site .loading {
+        height: 250px;
+        width: 250px;
+        margin: 60px;
+        margin-left: 200px;
+        border: 20px solid #ececec;
+        border-top: 20px solid #667761;
+        border-radius: 50%;
+        animation-name: girar;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(10,end);
+    }
+}
